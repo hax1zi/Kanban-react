@@ -1,6 +1,10 @@
 import type { CardType } from "../../types/card"
 
-export default function Card({title, priority, status}: CardType, className: string) {
+type CardProps = CardType & {
+  className?: string
+}
+
+export default function Card({title, priority, status, className}: CardProps) {
   const getPriorityColor = () => {
     switch (priority) {
       case "baixa":

@@ -22,11 +22,11 @@ export default function MainArea() {
           </div>
           <CreateCard/>
           {data.backlog.map((card, index) => (
-            <Card status={card.status} key={index} className=" dark:bg-backlog-dark bg-backlog" priority={card.priority} title={card.title}/>
+            <Card status={card.status} key={index} className="dark:bg-backlog-dark bg-backlog" priority={card.priority} title={card.title}/>
           ))}
         </div>
       </AddArea>
-      
+
       <AddArea width="99%" >
         <div className="h-full w-full flex">
           <div className="h-full w-[33.333%] shadow-md" onDragOver={(e) => e.preventDefault()}
